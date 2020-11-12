@@ -2,12 +2,15 @@
 Using csv files for portability and sql table as backup records which are encrypted'''
 
 # importing libraries
-import csv
-import os
-import time
-import mysql.connector
-from cryptography.fernet import Fernet
-import pickle
+try:
+    import csv
+    import os
+    import time
+    import mysql.connector
+    from cryptography.fernet import Fernet
+    import pickle
+except Exception as e:
+    print(e,'Error has occurred.')
 
 
 # initialising variables
